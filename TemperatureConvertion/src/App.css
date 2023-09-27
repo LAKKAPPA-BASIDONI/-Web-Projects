@@ -1,0 +1,38 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+body{
+  background-color: rgb(214, 211, 211);
+}
+h1{
+  font-family: 'Times New Roman', Times, serif;
+}
+#container{
+  margin: auto;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 45vw;
+  height: 35vh;
+  border: 30pt solid rgb(164, 225, 159);
+  border-radius: 15px;
+}
+
+.inputd{
+
+  display: flex;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 180%;
+  background-color: skyblue;
+  border: 1pt solid black;
+}
+.in1{
+  background-color: lightblue;
+}
+.in2{
+  background-color: orange;
+}
