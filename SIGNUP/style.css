@@ -6,7 +6,7 @@
 
 .container{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background:linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8));
     background-position: center;
     background-size: cover;
@@ -15,7 +15,7 @@
     width: 90%;
     max-width: 450px;
     position: absolute;
-    top: -15%;
+    top: -25%;
     left: 50%;
     transform: translate(-50%,50%);
     background: #fff;
@@ -97,4 +97,18 @@ form p a{
     background: #eaeaea;
     color: #555;
 
+}
+
+#refresh{
+    position: relative;
+    top: 30px;
+    flex-basis: 48% ;
+    background: #2bd28d;
+    color: #fff;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: 10px;
 }

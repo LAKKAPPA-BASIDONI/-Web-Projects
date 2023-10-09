@@ -13,13 +13,13 @@
             <form >
                 <div class="input-group">
                     <div class="input-field" id="name-field">
-                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Name" id="name">
                     </div>
                     <div class="input-field">
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" id="email">
                     </div>
                     <div class="input-field">
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" id="password">
                     </div>
                     <p>Lost password <a href="#">Click here</a></p>
                 </div>
@@ -27,6 +27,7 @@
                     <button type="button" id="signupBtn">Sign Up</button>
                     <button type="button" id="signinBtn" class="disable">Sign in</button>
                 </div>
+                <button type="button" id="refresh"> Refresh</button>
             </form>
 
             
@@ -38,18 +39,84 @@
         let namefield = document.getElementById("name-field");
         let tittle = document.getElementById("tittle");
 
+        
+
         signinBtn.onclick = function(){
             namefield.style.maxHeight="0";
             tittle.innerHTML="Sign In"
             signupBtn.classList.add("disable");
             signinBtn.classList.remove("disable");
+
+            signinBtn.addEventListener('click',function(){
+            let email = document.getElementById("email");
+            let password = document.getElementById("password");
+
+            if(signUpInformation.has(email.value)){
+                if( signUpInformation.get(email.value) == password ){
+                alert("Success fully loged in");
+                }
+                else{
+                    alert("incorrect password")
+                }
+            }else{
+                alert("wrong email");
+            }
+            
+        });
         }
+        var signUpInformation =new Map();
+        signUpInformation.set("lakkappa@gmail.com", 12345678);
+        signUpInformation.set("example@gmail.com", 123456);
+        signUpInformation.set("example2@gmail.com", 246888);
+
         signupBtn.onclick = function(){
             namefield.style.maxHeight="60px";
             tittle.innerHTML="Sign Up"
             signupBtn.classList.remove("disable");
             signinBtn.classList.add("disable");
+
+            let ee= document.getElementById("email");
+            let pass = document.getElementById("password");
+            let nm = document.getElementById("name");
+
+
+            signupBtn.addEventListener('click', function(){
+                if(ee.value.length>0 && pass.value.length>0 && nm.value.length>0){
+                    if(signUpInformation.has(ee.value)){
+                        alert("allready exist");
+
+                    }else{
+                        signUpInformation.set(ee.value,pass.value);
+                        saveData();
+                        alert(" Your email registered successfully");    
+                    }
+                }else{
+                    alert("all field are required");
+                }
+                
+            })
         }
+        
+        function saveData(){
+            localStorage.setItem('data',signUpInformation);
+        }
+        function showTask(){
+            signUpInformation=localStorage.getItem('data');
+        }
+        showTask();
+
+        const refresh = document.getElementById("refresh");
+        refresh.onclick = function(){
+            let ee= document.getElementById("email");
+            let pass = document.getElementById("password");
+            let nm = document.getElementById("name");
+            ee.value ="";
+            pass.value ="";
+            nm.value ="";
+
+        }
+
+
     </script>
     
 </body>
