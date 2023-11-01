@@ -11,3 +11,11 @@ types testing
 6) functional testing
 7) regration testing
 8) non functional testing
+
+* fuctional testing
+1) unit testing
+2) integration testing
+3) system testing
+
+* non functional testing
+1) performance testing
