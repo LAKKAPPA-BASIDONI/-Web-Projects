@@ -11,3 +11,17 @@ types testing
 6) functional testing
 7) regration testing
 8) non functional testing
+
+*software testing 
+1)manual testing             
+2)automation testing
+
+*manual testing 
+1)white box testing
+2)black box testing 
+3)gray box testing
+
+* black box testing
+1)functional testing 
+2)non functional testing
+
