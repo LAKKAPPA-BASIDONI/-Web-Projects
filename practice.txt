@@ -6,9 +6,9 @@ types testing
 1) unit testing 
 2) integration testing 
 3) system testing
-4) smoke testing
-5) acceptance testing
-6) functional testing
+4)     *smoke testing
+5)     *acceptance testing
+6)     *functional testing
 7) regration testing
 8) non functional testing
 
