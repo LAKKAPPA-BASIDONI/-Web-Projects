@@ -32,6 +32,7 @@ types testing
 
 * non functional testing
 1) performance testing
+2) hello
 
 https://github.com/LAKKAPPA-BASIDONI/-Web-Projects.git
 
